@@ -6,7 +6,7 @@
 
       <img src="../assets/logo-white 1.png" alt="" class="d-block mx-auto" id="logo">
       <div class="text-center">
-        <strong id="welcome">Welcome to our platform!</strong>
+        <strong id="welcome">Welcome to our hamza!</strong>
         <p id="subtitle-welcome">Log in to access your account and start exploring</p>
       </div>
 
@@ -53,6 +53,7 @@
     methods: {
       async login() {
         try {
+          console.log(process.env.VUE_URL)
           const response = await axios.post(`${process.env.VUE_URL}/api/login`, this.formLogin)
           localStorage.setItem('token', response.data.token)
           this.$router.push('/DashBord')
