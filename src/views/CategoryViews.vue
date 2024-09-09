@@ -207,7 +207,7 @@ import { mapActions, mapState } from 'vuex';
                     const formData = new FormData()
                     formData.append('name', this.category.name)
                     formData.append('image', this.category.image)
-                    const response = await axios.put(`${process.env.VUE_URL}/api/category/${id}`, formData, {
+                    const response = await axios.put(`${process.env.VUE_APP_URL}/api/category/${id}`, formData, {
                         
                         headers: {
                             Authorization: `Bearer ${token}`,

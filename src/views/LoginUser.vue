@@ -53,8 +53,8 @@
     methods: {
       async login() {
         try {
-          console.log(process.env.VUE_URL)
-          const response = await axios.post(`${process.env.VUE_URL}/api/login`, this.formLogin)
+          console.log(process.env.VUE_APP_URL)
+          const response = await axios.post(`${process.env.VUE_APP_URL}/api/login`, this.formLogin)
           localStorage.setItem('token', response.data.token)
           this.$router.push('/DashBord')
         } catch (error) {

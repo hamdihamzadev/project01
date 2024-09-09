@@ -30,7 +30,7 @@ const actions = {
     }) {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get(`${process.env.VUE_URL}/api/product`, {
+            const response = await axios.get(`${process.env.VUE_APP_URL}/api/product`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -46,7 +46,7 @@ const actions = {
 
     async ac_addProduct({commit},product) {
         const token = localStorage.getItem('token')
-        const response = await axios.post(`${process.env.VUE_URL}/api/product`,product, {
+        const response = await axios.post(`${process.env.VUE_APP_URL}/api/product`,product, {
             headers: {
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'multipart/form-data'
@@ -59,7 +59,7 @@ const actions = {
     async ac_editeProduct({commit},{product,id}){
         try{
             const token=localStorage.getItem('token')
-            const response = await axios.put(`${process.env.VUE_URL}/api/product/${id}`,product, {
+            const response = await axios.put(`${process.env.VUE_APP_URL}/api/product/${id}`,product, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data'
@@ -76,7 +76,7 @@ const actions = {
     async ac_deleteProduct({commit},id){
         try{
             const token = localStorage.getItem('token')
-            const response = await axios.delete(`${process.env.VUE_URL}/api/product/${id}`, {
+            const response = await axios.delete(`${process.env.VUE_APP_URL}/api/product/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

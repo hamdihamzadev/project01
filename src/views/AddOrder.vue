@@ -183,7 +183,7 @@ import { mapActions, mapState } from 'vuex';
                 try {
                     const token = localStorage.getItem('token')
                     const response = await axios.put(
-                        `${process.env.VUE_URL}/api/productQuantity/${this.formOrder.product}`, {
+                        `${process.env.VUE_APP_URL}/api/productQuantity/${this.formOrder.product}`, {
                             quantity: this.quantity
                         }, {
                             headers: {
@@ -199,7 +199,7 @@ import { mapActions, mapState } from 'vuex';
             async sendConversionStatusOrders(){
                 try{
                     const token=localStorage.getItem('token')
-                    const response=await axios.post(`${process.env.VUE_URL}/api/order/conversion`,{
+                    const response=await axios.post(`${process.env.VUE_APP_URL}/api/order/conversion`,{
                         status:'New',
                         date:this.caclDate
                     },{

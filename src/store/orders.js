@@ -43,7 +43,7 @@ const actions = {
     }) {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get(`${process.env.VUE_URL}/api/orders`, {
+            const response = await axios.get(`${process.env.VUE_APP_URL}/api/orders`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -59,7 +59,7 @@ const actions = {
     async ac_postOrder({commit},order) {
         try {
             const token = localStorage.getItem('token')
-           const response= await axios.post(`${process.env.VUE_URL}/api/order`,order, {
+           const response= await axios.post(`${process.env.VUE_APP_URL}/api/order`,order, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -79,7 +79,7 @@ const actions = {
     }, type) {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get(`${process.env.VUE_URL}/api/orderConversionStatus`, {
+            const response = await axios.get(`${process.env.VUE_APP_URL}/api/orderConversionStatus`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -98,7 +98,7 @@ const actions = {
     async ac_deleteOrder({commit},id){
         try{
             const token=localStorage.getItem('token')
-            const response=await axios.delete(`${process.env.VUE_URL}/api/order/${id}`,{
+            const response=await axios.delete(`${process.env.VUE_APP_URL}/api/order/${id}`,{
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

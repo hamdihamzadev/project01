@@ -260,7 +260,7 @@
       async updateStatusTable(id, value) {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.put(`${process.env.VUE_URL}/api/order/statusTable/${id}`, {
+          const response = await axios.put(`${process.env.VUE_APP_URL}/api/order/statusTable/${id}`, {
             statustable: value
           }, {
             headers: {
@@ -276,7 +276,7 @@
       async sendOrder(id) {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.put(`${process.env.VUE_URL}/api/order/sendOrder/${id}`, {
+          const response = await axios.put(`${process.env.VUE_APP_URL}/api/order/sendOrder/${id}`, {
             statussuivi: this.statusSuivi,
             statustable: 'Not treat'
           }, {
@@ -293,7 +293,7 @@
       async sendConversionStatusOrders() {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.post(`${process.env.VUE_URL}/api/order/conversion`, {
+          const response = await axios.post(`${process.env.VUE_APP_URL}/api/order/conversion`, {
             status: this.statusSuivi,
             date: this.caclDate
           }, {
@@ -312,7 +312,7 @@
       async getStatusConversion() {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.get('${process.env.VUE_URL}api/orderConversionStatus', {
+          const response = await axios.get(`${process.env.VUE_APP_URL}api/orderConversionStatus`, {
             headers: {
               Authorization: `Bearer ${token}`
             }
@@ -329,7 +329,7 @@
       async updateOrder() {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.put(`${process.env.VUE_URL}api/order/${this.customerEdit.id}`, {
+          const response = await axios.put(`${process.env.VUE_APP_URL}api/order/${this.customerEdit.id}`, {
             quantity: this.customerEdit.Quantity,
             total: this.Total,
           }, {
@@ -347,7 +347,7 @@
       async deletOrder(id) {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.delete(`${process.env.VUE_URL}api/order/${id}`, {
+          const response = await axios.delete(`${process.env.VUE_APP_URL}api/order/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`
             }
@@ -362,7 +362,7 @@
       async deleteconversion(id) {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.delete(`${process.env.VUE_URL}api/orderConversionStatus/${id}`, {
+          const response = await axios.delete(`${process.env.VUE_APP_URL}api/orderConversionStatus/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`
             }
@@ -379,7 +379,7 @@
       async editStockProduct() {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.put(`${process.env.VUE_URL}/api/productQuantity/${this.customerEdit.productId}`, {
+          const response = await axios.put(`${process.env.VUE_APP_URL}/api/productQuantity/${this.customerEdit.productId}`, {
               quantity: this.RecentStockProduct()
             }, {
               headers: {
@@ -397,7 +397,7 @@
         try {
           const token = localStorage.getItem('token')
           const response = await axios.put(
-            `${process.env.VUE_URL}/api/productQuantity/${this.OrderDelete.productId}`, {
+            `${process.env.VUE_APP_URL}/api/productQuantity/${this.OrderDelete.productId}`, {
               quantity: this.StockPrdinOrderDelete()
             }, {
               headers: {
@@ -416,7 +416,7 @@
       async getOrderUpdate() {
         try {
           const token = localStorage.getItem('token')
-          const response = await axios.get(`${process.env.VUE_URL}api/order/${this.customerEdit.id}`, {
+          const response = await axios.get(`${process.env.VUE_APP_URL}api/order/${this.customerEdit.id}`, {
             headers: {
               Authorization: `Bearer ${token}`
             }

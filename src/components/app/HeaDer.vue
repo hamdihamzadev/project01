@@ -57,7 +57,7 @@
             async getUser() {
                 try {
                     const token = localStorage.getItem('token')
-                    const response = await axios.get(`${process.env.VUE_URL}/api/getUser`, {
+                    const response = await axios.get(`${process.env.VUE_APP_URL}/api/getUser`, {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }

@@ -195,7 +195,7 @@
             async createCustomer() {
                 try {
                     const token = localStorage.getItem('token')
-                    const responsive = await axios.post(`${process.env.VUE_URL}/api/customers`,this.formCustomer, {
+                    const responsive = await axios.post(`${process.env.VUE_APP_URL}/api/customers`,this.formCustomer, {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }

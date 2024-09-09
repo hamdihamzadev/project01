@@ -232,7 +232,7 @@
                 try {
                     const token = localStorage.getItem('token')
                     const response = await axios.put(
-                        `${process.env.VUE_URL}/api/productQuantity/${id}`, {
+                        `${process.env.VUE_APP_URL}/api/productQuantity/${id}`, {
                             quantity: quantity
                         }, {
                             headers: {

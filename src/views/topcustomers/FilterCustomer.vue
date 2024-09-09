@@ -221,7 +221,7 @@
                 try {
                     let month = this.allMonths.indexOf(this.MonthSelecte) + 1
                     const token = localStorage.getItem('token')
-                    const response = await axios.get(`${process.env.VUE_URL}/api/getOrdersAllCustomer/${month}`, {
+                    const response = await axios.get(`${process.env.VUE_APP_URL}/api/getOrdersAllCustomer/${month}`, {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }

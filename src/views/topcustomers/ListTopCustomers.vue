@@ -122,7 +122,7 @@
             async getOrdersCustomer(id) {
                 try {
                     const token = localStorage.getItem('token')
-                    const response = await axios.get(`${process.env.VUE_URL}/api/orders/customers/${id}`, {
+                    const response = await axios.get(`${process.env.VUE_APP_URL}/api/orders/customers/${id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }

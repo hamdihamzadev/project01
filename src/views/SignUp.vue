@@ -67,7 +67,7 @@
         methods: {
             async signup() {
                 try {
-                    await axios.post(`${process.env.VUE_URL}/api/signup`, this.form)
+                    await axios.post(`${process.env.VUE_APP_URL}/api/signup`, this.form)
                     this.$router.push('/Login')
                 } catch (error) {
                     console.log('error is ', error)

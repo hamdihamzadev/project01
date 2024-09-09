@@ -28,7 +28,7 @@ const actions = {
     }) {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get(`${process.env.VUE_URL}/api/customers`, {
+            const response = await axios.get(`${process.env.VUE_APP_URL}/api/customers`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -44,7 +44,7 @@ const actions = {
     async ac_EditCustomer({commit},{customer,id}){
         try{
             const token=localStorage.getItem('token')
-            const response = await axios.put(`${process.env.VUE_URL}/api/customers/${id}`,customer, {
+            const response = await axios.put(`${process.env.VUE_APP_URL}/api/customers/${id}`,customer, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -60,7 +60,7 @@ const actions = {
     async ac_deleteCustomer({commit},id) {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.delete(`${process.env.VUE_URL}/api/customers/${id}`, {
+            const response = await axios.delete(`${process.env.VUE_APP_URL}/api/customers/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

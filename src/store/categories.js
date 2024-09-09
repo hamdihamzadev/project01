@@ -27,7 +27,7 @@ const actions = {
     }) {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get(`${process.env.VUE_URL}/api/category`, {
+            const response = await axios.get(`${process.env.VUE_APP_URL}/api/category`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -44,7 +44,7 @@ const actions = {
     async ac_addCategory({commit},category){
         try{
             const token = localStorage.getItem('token')
-            const response = await axios.post(`${process.env.VUE_URL}/api/category`,category, {
+            const response = await axios.post(`${process.env.VUE_APP_URL}/api/category`,category, {
                 
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const actions = {
     async ac_deleteCategory({commit},id){
         try{
             const token = localStorage.getItem('token')
-            const response = await axios.delete(`${process.env.VUE_URL}/api/category/${id}`, {
+            const response = await axios.delete(`${process.env.VUE_APP_URL}/api/category/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
