@@ -66,15 +66,14 @@
       signup() {
         this.$router.push('/')
       }
+    },
+
+    mounted(){
+      console.log(`this is key : ${process.env.VUE_APP_URL}`)
     }
-
-
-
-
 
   }
 </script>
-
 
 
 <style scoped>
