@@ -6,7 +6,7 @@
 
       <img src="../assets/logo-white 1.png" alt="" class="d-block mx-auto" id="logo">
       <div class="text-center">
-        <strong id="welcome">Welcome to our version04!</strong>
+        <strong id="welcome">Welcome to our test!</strong>
         <p id="subtitle-welcome">Log in to access your account and start exploring</p>
       </div>
 
